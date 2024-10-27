@@ -1,0 +1,325 @@
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --box-shadow: 0 8px 22px rgb(0,0,0,0.1);
+}
+
+body {
+    font-family: Montserrat, sans-serif !important;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+h1,h2,h3,h4,h5,h6,
+.display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* navbar section CSS / .navbar-brand img - font size: 3rem or 48px */
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-item .nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-item .nav-link {
+    position: relative;
+}
+
+.nav-item .nav-link:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: 0.5s;
+    content: "";
+    transform-origin: left;
+    background-color: var(--primary);
+}
+
+.nav-item .nav-link:hover:after {
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+
+.navbar-brand img {
+    height: 48px;
+    width: 100px;
+}
+
+
+.container button {
+    font-size: px;
+}
+
+.offcanvas-header {
+    box-shadow: var(--box-shadow);
+}
+
+
+/* bootstrap btn CSS */
+
+.btn {
+    padding: 14px 18px;
+    border-width: 2px;
+    border-radius: 0;
+}
+
+
+/* hero section CSS */
+
+.hero {
+    background-image: url(./images/studypic.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(21, 20, 51, 0.8);
+    z-index: -1;
+}
+
+
+/* all section CSS */
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+
+/* card-effect CSS */
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 32px;
+    border-radius: 100%;
+    flex: none;
+}
+
+/* services section CSS */
+
+.service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.service::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.service .iconbox {
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.service:hover h5,
+.service:hover p {
+    color: #fff;
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+/* features section CSS */
+
+.col-img {
+    background-image: url(./images/family.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+
+/* project section CSS */
+
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(21, 20, 51, 0.8);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.project img {
+    transition: all 0.4s ease;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+
+/* pricing section CSS */
+
+.pricing i {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.pricing ul li {
+    margin-top: 8px;
+}
+
+.team-member img {
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+}
+
+
+/* social icon CSS */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--primary);
+    border-radius: 2px solid var(--primary);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: all 0.4s ease;
+    border: 2px solid var(--primary);
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--primary);
+}
+
+/* form */
+
+form input.form-control {
+    height: 56px;
+}
+
+form .form-control {
+    border: transparent;
+    border-radius: 0;
+    background-color: rgb(0,0,0,0.04);
+}
+
+/* footer */
+
+footer .paragraph-text {
+    color: var(--body) !important;
+}
+
+footer  .footer-link {
+    color: var(--body) !important;
+}
+
+footer span {
+    color: var(--body) !important;
+}
+
+footer .social-link {
+    color: var(--body) !important;
+}
+
+footer a {
+    transition: color all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary) !important;
+}
+
+footer h5 {
+    color: #fff;
+}
+
+.footer-logo img {
+    height: 48px;
+    max-width: 100px;
+}
